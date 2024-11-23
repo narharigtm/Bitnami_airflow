@@ -1,0 +1,22 @@
+services:
+  redis:
+    build: ./redis
+    ports:
+      - '6397:6397'
+
+  postgresql:
+    build: ./postgresql
+    ports:
+      - '5432:5432'
+
+  airflow:
+    build: ./airflow
+    ports:
+      - '8080:8080'
+
+  schedular:
+    build: ./schedular
+
+  worker:
+    build: ./worker 
+
